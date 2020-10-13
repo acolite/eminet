@@ -24,7 +24,7 @@ and activate the environment: `conda activate eminet`
 ## Alternative use
 EMINET can be imported in your Python code, if it is in your $PATH. For example:
 
-            mport sys, os
+            import sys, os
             user_home = os.path.expanduser("~")
             sys.path.append(user_home+'/git/eminet')
             import eminet as em
@@ -32,8 +32,8 @@ EMINET can be imported in your Python code, if it is in your $PATH. For example:
 You can then process a single spectrum or a list of spectra, e.g.:
 
             inp = [[0.15588132,0.18297164,0.26016742,0.31183824,0.36371586,0.45715618,0.45273715],
-       [0.035160758,0.040426794,0.07381269,0.057351366,0.41716343,0.23558201,0.124089],
-       [0.03215484,0.040045694,0.052055236,0.02672039,0.008589883,0.0022362447,0.0017197328]]
+                  [0.035160758,0.040426794,0.07381269,0.057351366,0.41716343,0.23558201,0.124089],
+                  [0.03215484,0.040045694,0.052055236,0.02672039,0.008589883,0.0022362447,0.0017197328]]
             out1 = em.eminet_models(inp, netname='Net1', use_water_defaults=True)
             print('Net1 result', out1)
             out2 = em.eminet_models(inp, netname='Net2', use_water_defaults=True)
